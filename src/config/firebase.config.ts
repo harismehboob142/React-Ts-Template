@@ -9,13 +9,6 @@
 // import { getAuth, OAuthProvider } from "firebase/auth";
 
 // const firebaseConfig = {
-//   apiKey: "AIzaSyBq2ZxJg_18KhPMgjiCn9SV5xDdLp1yZ-o",
-//   authDomain: "skribr-fabf1.firebaseapp.com",
-//   projectId: "skribr-fabf1",
-//   storageBucket: "skribr-fabf1.appspot.com",
-//   messagingSenderId: "742165577828",
-//   appId: "1:742165577828:web:0b9526314804aa71409f71",
-//   measurementId: "G-2PWT5H8SJG",
 // };
 
 // // Initialize Firebase
