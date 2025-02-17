@@ -1,0 +1,16 @@
+.table-wrapper {
+  position: relative;
+  padding-bottom: 60px;
+}
+
+.table-wrapper .rdt_Pagination {
+  border: 1px solid transparent;
+  position: fixed;
+  bottom: 0;
+  left: 60%;
+  transform: translateX(-50%);
+  z-index: 1000;
+  background-color: white;
+  width: 100%;
+  max-width: 450px; /* Adjust based on your layout */
+}

@@ -1,14 +1,16 @@
 import { Fragment } from "react";
 import { Controller } from "react-hook-form";
-import { Image, TextInput as MantineTextInput } from "@mantine/core";
+import { IconChevronDown } from "@tabler/icons-react";
+import { Select as MantineSelect } from "@mantine/core";
 
 interface ITextInputProps {
   name: string;
   control: any;
+  data: any;
   [key: string]: any;
 }
 
-const TextInput = ({ name, control, ...restProps }: ITextInputProps) => {
+const Select = ({ name, control, data, ...restProps }: ITextInputProps) => {
   return (
     <Fragment>
       <Controller
@@ -16,10 +18,12 @@ const TextInput = ({ name, control, ...restProps }: ITextInputProps) => {
         control={control}
         render={({ field, fieldState: { error } }) => (
           <>
-            <MantineTextInput
+            <MantineSelect
+              rightSection={<IconChevronDown size="1rem" stroke={2} />}
               {...field}
               {...restProps}
               error={error?.message}
+              data={data}
             />
           </>
         )}
@@ -28,4 +32,4 @@ const TextInput = ({ name, control, ...restProps }: ITextInputProps) => {
   );
 };
 
-export default TextInput;
+export default Select;

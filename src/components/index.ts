@@ -1,2 +1,11 @@
+export * from "./Modals";
 export { default as Form } from "./Form/Form";
+export { default as Select } from "./Select/Select";
+export { default as Checkbox } from "./Checkbox/Checkbox";
+export { default as UserCard } from "./UserCard/UserCard";
+export { default as DataTable } from "./DataTable/DataTable";
 export { default as TextInput } from "./TextInput/TextInput";
+export { default as SquareCard } from "./SquareCard/SquareCard";
+export { default as AutoComplete } from "./AutoComplete/AutoComplete";
+export { default as PasswordInput } from "./PasswordInput/PasswordInput";
+export { default as FavoriteAthletesCard } from "./FavoriteAthleteCard/FavoriteAthleteCard";

@@ -1,14 +1,19 @@
 import { Fragment } from "react";
 import { Controller } from "react-hook-form";
-import { Image, TextInput as MantineTextInput } from "@mantine/core";
+import { Autocomplete as MantineAutocomplete } from "@mantine/core";
 
-interface ITextInputProps {
+interface IAutocompleteProps {
   name: string;
   control: any;
   [key: string]: any;
 }
 
-const TextInput = ({ name, control, ...restProps }: ITextInputProps) => {
+const Autocomplete = ({
+  name,
+  control,
+  data,
+  ...restProps
+}: IAutocompleteProps) => {
   return (
     <Fragment>
       <Controller
@@ -16,7 +21,8 @@ const TextInput = ({ name, control, ...restProps }: ITextInputProps) => {
         control={control}
         render={({ field, fieldState: { error } }) => (
           <>
-            <MantineTextInput
+            <MantineAutocomplete
+              data={data}
               {...field}
               {...restProps}
               error={error?.message}
@@ -28,4 +34,4 @@ const TextInput = ({ name, control, ...restProps }: ITextInputProps) => {
   );
 };
 
-export default TextInput;
+export default Autocomplete;

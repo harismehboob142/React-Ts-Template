@@ -1,6 +1,6 @@
 import { Fragment } from "react";
 import { Controller } from "react-hook-form";
-import { Image, TextInput as MantineTextInput } from "@mantine/core";
+import { PasswordInput as MantinePasswordInput } from "@mantine/core";
 
 interface ITextInputProps {
   name: string;
@@ -8,7 +8,7 @@ interface ITextInputProps {
   [key: string]: any;
 }
 
-const TextInput = ({ name, control, ...restProps }: ITextInputProps) => {
+const PasswordInput = ({ name, control, ...restProps }: ITextInputProps) => {
   return (
     <Fragment>
       <Controller
@@ -16,7 +16,7 @@ const TextInput = ({ name, control, ...restProps }: ITextInputProps) => {
         control={control}
         render={({ field, fieldState: { error } }) => (
           <>
-            <MantineTextInput
+            <MantinePasswordInput
               {...field}
               {...restProps}
               error={error?.message}
@@ -28,4 +28,4 @@ const TextInput = ({ name, control, ...restProps }: ITextInputProps) => {
   );
 };
 
-export default TextInput;
+export default PasswordInput;
